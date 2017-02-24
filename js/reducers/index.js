@@ -23,17 +23,6 @@ export const hotColdReducer = (state=initialGameState, action) => {
 	if (action.type === actions.NEW_GAME) {
 		return initialGameState
 	};
-	//generates new random number   - is this necessary with new game?
-	else if (action.type === actions.GENERATE_NUMBER) {
-		let new = false;
-		const currentGameState = Object.assign({}, state, {
-			answer: randomNum,
-			new: true
-		});
-		return {
-			currentGameState;
-		}
-	}
 	//adds new guess to list, compares guess to answer, displays temp
 	else if (action.type === actions.SUBMIT_GUESS) {
 		let guess = document.getElementById('guess-input').value;
@@ -63,7 +52,7 @@ export const hotColdReducer = (state=initialGameState, action) => {
 				else if (difference >= 10) {
 					message = warmer;
 				}
-				else if (difference >= 5) {
+				else if (difference >= 1) {
 					message = warmest;
 				}
 			};

@@ -1,2 +1,3 @@
 import React from 'react';
-import
+import messageDisplay from ''
+//guess block contains message comp, input with button comp, guess list comp
