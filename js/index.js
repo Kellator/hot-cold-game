@@ -31,9 +31,9 @@ export const compareGuess = compare => ({
 	compare
 });
 // display message
-export const DISPLAY_MESSAGE = 'DISPLAY_MESSAGE';
-export const displayMessage = display => ({
-	type: DISPLAY_MESSAGE,
+export const DISPLAY_GUESS = 'DISPLAY_GUESS';
+export const displayGuess = display => ({
+	type: DISPLAY_GUESS,
 	display
 });
 // determine if guess is hot or cold
